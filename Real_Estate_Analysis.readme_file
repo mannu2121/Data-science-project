@@ -1,0 +1,52 @@
+OVERVIEW
+ 
+  This project involves the analysis of real estate data, covering various aspects such as data exploration, visualization,
+  data cleaning, outlier detection, and predictive modeling. The primary objective is to gain insights into the real estate dataset and develop a predictive model
+  for the 'Sale Amount' using machine learning techniques.
+
+Steps Taken 
+DATA EXPLORATION AND VISUALIZATION 
+
+1. Loading and Overview
+   - Imported the dataset using pandas and inspected its shape and structure.
+   - Displayed the first few rows and a random sample of the data for initial insights.
+
+2. Summary Statistics and Info
+   - Utilized info(), describe(), and isnull().sum() to understand data types, summary statistics, and identify missing values.
+
+3. Visualization
+   - Employed seaborn and matplotlib for data visualization, including count plots, histograms, and boxplots to explore features like 
+'Property Type,' 'Residential Type,' 'Sale Amount,' 'Assessed Value,' and more.
+
+DATA CLEANING
+
+1. Handling Missing Values
+   - Removed rows with missing or 'Nan' values in critical columns such as 'Address,' 'Assessed Value,' 'List Year,' 'Date Recorded,' 'Town,' and 'Sale Amount.'
+
+2. Imputation
+   - Imputed missing values in categorical columns ('Property Type' and 'Residential Type') with the mode.
+  - Replaced zero values in 'Assessed Value' and 'Sale Amount' with the mean.
+
+3. Encoding
+   - Applied one-hot encoding to categorical columns for modeling purposes.
+
+4. Outlier Detection and Treatment
+   - Identified outliers using z-scores and created visualizations using boxplots.
+   - Winsorized extreme values in 'Sale Amount,' 'Assessed Value,' and 'Sales Ratio.'
+   - Applied log transformation and reciprocal transformation to handle skewness in numerical features.
+
+PREDICTIVE MODELING
+
+1. Data Splitting and Scaling
+  - Split the dataset into training and testing sets.
+  - Standardized the features using StandardScaler.
+
+2. Lasso Regression Model
+  - Developed a Lasso regression model to predict 'Sale Amount.'
+  - Fine-tuned hyperparameters using GridSearchCV.
+  - Evaluated the model's performance using Mean Squared Error (MSE).
+
+3. Linear Regression Model
+  - Built a Linear Regression model as a baseline for comparison.
+  - Assessed the model's performance using MSE and R-squared.
+
